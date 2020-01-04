@@ -1,0 +1,154 @@
+/*this style working as heade for all webpages*/
+header {
+    top: 0%;
+    background-color: #404da3;
+    min-width: 100%;
+    position: fixed;
+    left: 0%;
+    font-size: 30px;
+    height: 6%;
+}
+/*this style working as img for all webpages*/
+img {
+    top: 0.1%;
+    position: fixed;
+    left: 8%;
+    height: 5%;
+}
+/*this stylesheet is for lable movie-cruiser */
+.movie-cruiser {
+    top: 0.1%;
+    position: fixed;
+    left: 1%;
+    font-size: 20px;
+    color: #edf5ef;
+}
+/*this is used for Movies-in-header Section */
+.movies-header-section {
+    top: 1.9%;
+    position: fixed;
+    font-family: calibri;
+    font-size: 19px;
+    left: 91%;
+    color: #f7f5f5;
+}
+/*this is used for favorites-header-section Section */
+.favorites-header-section {
+    top: 1.9%;
+    position: fixed;
+    font-family: calibri;
+    font-size: 19px;
+    left: 96%;
+    color: #f7f5f5;
+}
+/*this style sheet working under movies-in-lable-table*/
+.movies-in-lable-table {
+    top: 9%;
+    position: fixed;
+    font-family: calibri;
+    left: 6.5%;
+    font-size: 25px;
+}
+/*this css property is for for-tables-in-movie-list*/
+.for-tables-in-movie-list {
+    top: 19%;
+    position: fixed;
+    left: 6.5%;
+    height: 10%;
+    width: 50%;
+}
+/*this css property is for alignment of table*/
+.right {
+    text-align: right;
+}
+/*this css property is for alignment of table*/
+.center {
+    text-align: center;
+}
+/*this style is used for footer section*/
+footer {
+    bottom: 0%;
+    background-color: #686962;
+    min-width: 100%;
+    position: fixed;
+    left: 0%;
+    font-size: 14px;
+}
+/*for edit menu item status*/ /*where mit refers to menu item*/
+.edit-for-status {
+    top: 12%;
+    position: fixed;
+    font-size: 29;
+    left: 4%;
+    font-size: 22px;
+}
+/*this style working under cart-empty webpage*/
+.for-Message {
+    top: 19%;
+    font-size: 14px;
+    color: green;
+    position: fixed;
+    left: 4%;
+    font-weight: Bold;
+}
+/*this stylesheet working under movie-list-customer-notification webpage*/
+.alert-message-for-notification {
+    top: 12%;
+    position: fixed;
+    left: 24%;
+    color: #32d172;
+    font-weight: bold;
+}
+/*this style working under favorite webpage*/
+.Favorites-empty {
+    top: 12%;
+    position: fixed;
+    left: 4%;
+    font-size: 27px;
+    font-family: calibri;
+}
+/*this style working under favorite webpage*/
+.for-message-display {
+    top: 19%;
+    color: #949996;
+    position: fixed;
+    left: 4%;
+    font-style: Bold;
+}
+/*this style used for color of links*/
+.a {
+    color: #2fa3bd;
+    font-weight: bold;
+}
+/*this style is used under cart-notification webpage*/
+.Favorites-notification1 {
+    top: 13%;
+    color: #32a852;
+    position: fixed;
+    left: 14%;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: Bold;
+}
+/*this css property is used for save button in edit-movie webpage*/
+.save-Button {
+    border: none;
+    font-size: 25px;
+    color: #e9ecf2;
+    Padding: 9px;
+    width: 150px;
+    background-color: #404da3;
+}
+/*this css property is is used to increase the size of checkbox in Edit-movie webpage*/
+.checkbox {
+    height: 21px;
+    width: 20px;
+}
+/*this css property is for lable favourites in Favorites.html webpage*/
+.favourites {
+    top: 12%;
+    position: fixed;
+    font-size: 29;
+    left: 6.5%;
+    font-size: 22px;
+}
