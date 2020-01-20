@@ -15,12 +15,13 @@ import com.cognizant.movie.model.Movie;
 
 @WebServlet("/ShowMovieListAdmin")
 public class ShowMovieListAdminServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	MovieDao movieDao = new MovieDaoCollectionImpl();
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        MovieDao movieDao = new MovieDaoCollectionImpl();
         List<Movie> movieList = movieDao.getMovieListAdmin();
         request.setAttribute("movie", movieList);
         request.getRequestDispatcher("movie-list-admin.jsp").forward(request, response);
-	}
+    }
 }

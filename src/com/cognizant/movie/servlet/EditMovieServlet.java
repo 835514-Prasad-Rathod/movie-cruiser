@@ -7,12 +7,43 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cognizant.movie.dao.MovieDao;
+import com.cognizant.movie.dao.MovieDaoCollectionImpl;
+import com.cognizant.movie.model.Movie;
+import com.cognizant.movie.util.DateUtil;
+
 @WebServlet("/EditMovie")
 public class EditMovieServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
+    private static final long serialVersionUID = 1L;
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        long movieId = Long.parseLong(request.getParameter("movieId"));
+        String Title = request.getParameter("title");
+        long BoxOffice = Long.parseLong(request.getParameter("boxOffice"));
+        String isActive = request.getParameter("active");
+        String DateOfLaunch = request.getParameter("dateOfLaunch");
+        String genre = request.getParameter("genre");
+        String isHasTeaser = request.getParameter("hasTeaser");
+        boolean active = false;
+        boolean hasTeaser = false;
+        if (isActive.equals("No")) {
+            active = false;
+        } else {
+            active = true;
+
+        }
+        if (isHasTeaser == null) {
+            hasTeaser = false;
+        } else {
+            hasTeaser = true;
+        }
+        Movie movie = new Movie(movieId, Title, BoxOffice, active,
+                DateUtil.convertToDate(DateOfLaunch), genre, hasTeaser);
+        MovieDao movieDao = new MovieDaoCollectionImpl();
+        movieDao.modifyMovieList(movie);
+        request.getRequestDispatcher("edit-movie-status.jsp").forward(request, response);
+
+    }
 
 }

@@ -10,7 +10,7 @@
         <img src="images\logo.png" />
         <p class="movie-cruiser">Movie Cruiser</p>
         <nav>
-            <a class="movies-header-section" href="movie-list-admin.html">Movies</a>
+            <a class="movies-header-section" href="ShowMovieListAdmin">Movies</a>
         </nav>
     </header>
     <p class="edit-for-status">Edit Movie Status</p>

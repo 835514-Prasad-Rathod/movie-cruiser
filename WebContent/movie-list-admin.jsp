@@ -9,13 +9,9 @@
 <link rel="stylesheet" type="text/css" href="styles\style.css">
 </head>
 <body>
-    <header>
-        <img src="images\logo.png" />
-        <p class="movie-cruiser">Movie Cruiser</p>
-        <nav>
-            <a class="movies-header-section" href="ShowMovieListAdmin">Movies</a>
-        </nav>
-    </header>
+    <header> <img src="images\logo.png" />
+    <p class="movie-cruiser">Movie Cruiser</p>
+    <nav> <a class="movies-header-section" href="ShowMovieListAdmin">Movies</a> </nav> </header>
     <p class="movies-in-lable-table">Movies</p>
     <table class="for-tables-in-movie-list" style="width: 50%">
         <tr>
@@ -31,7 +27,8 @@
 
             <tr>
                 <td class="headers-row">${movie.getTitle()}</td>
-                <td class="second-row">${movie.getBoxOffice()}</td>
+                <td align="left"><f:formatNumber type="currency"
+                        value="${movie.getBoxOffice()}" maxFractionDigits="0" /></td>
                 <td><c:choose>
                         <c:when test="${movie.isActive()==true}">Yes</c:when>
                         <c:otherwise>No</c:otherwise>
@@ -42,12 +39,12 @@
                         <c:when test="${movie.isHasTeaser()==true}">Yes</c:when>
                         <c:otherwise>No</c:otherwise>
                     </c:choose></td>
-                <td><a href="ShowEditMovie?movieId=${movieId.getId()}">Edit</a></td>
+                <td><a href="ShowEditMovie?movieId=${movie.getMovieId()}">Edit</a></td>
             </tr>
-</c:forEach>
+        </c:forEach>
     </table>
     <footer>
-        <p>Copyright &copy;2019</p>
+    <p>Copyright &copy;2019</p>
     </footer>
 </body>
 </html>

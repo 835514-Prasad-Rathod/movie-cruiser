@@ -19,7 +19,7 @@ img {
 .movie-cruiser {
     top: 0.1%;
     position: fixed;
-    left: 1%;
+    left: 0.9%;
     font-size: 20px;
     color: #edf5ef;
 }
@@ -51,7 +51,7 @@ img {
 }
 /*this css property is for for-tables-in-movie-list*/
 .for-tables-in-movie-list {
-    top: 19%;
+    top: 17%;
     position: fixed;
     left: 6.5%;
     height: 10%;
@@ -146,9 +146,17 @@ footer {
 }
 /*this css property is for lable favourites in Favorites.html webpage*/
 .favourites {
-    top: 12%;
+    top: 10%;
     position: fixed;
     font-size: 29;
     left: 6.5%;
     font-size: 22px;
+}
+.for-Message-delete {
+    top: 7%;
+    font-size: 19px;
+    color: green;
+    position: fixed;
+    left: 4%;
+    font-weight: Bold;
 }

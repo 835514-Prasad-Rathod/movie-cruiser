@@ -10,13 +10,13 @@
         <img src="images\logo.png" />
         <p class="movie-cruiser">Movie Cruiser</p>
         <nav>
-            <a class="movies-header-section" href="movie-list-customer.html">Movies</a> <a
-                class="favorites-header-section" href="favorites.html">Favourites</a>
+            <a class="movies-header-section" href="ShowMovieListCustomer">Movies</a> <a
+                class="favorites-header-section" href="ShowFavorite">Favourites</a>
         </nav>
     </header>
     <p class="Favorites-empty">Favorites</p>
     <p class="for-message-display">
-        No items in favorites.Use'Add to favorite' option in<a href="movie-list-customer.html"
+        No items in favorites.Use'Add to favorite' option in<a href="ShowMovieListCustomer"
             class="a">Movie List.</a>
     </p>
     <footer>

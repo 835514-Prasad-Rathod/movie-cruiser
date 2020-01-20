@@ -11,27 +11,29 @@
 <body>
     <header> <img src="images\logo.png" />
     <p class="movie-cruiser">Movie Cruiser</p>
-    <nav> <a class="movies-header-section" href="">Movies</a> <a
-        class="favorites-header-section" href="favorites.html">Favorites</a> </nav> </header>
+    <nav> <a class="favorites-header-section" href="ShowFavorite">Favorites</a> </nav> </header>
     <p class="movies-in-lable-table">Movies</p>
+    <c:if test="${addFavoriteStatus==true }"><br><br>
+    <h4 class="for-Message-delete">Movie Added To Favorites Sucesfully</h4>
+    </c:if>
     <table class="for-tables-in-movie-list" style="width: 50%" cellspacing="4">
         <tr>
             <th align="left"><b>Title</b></th>
-            <th class="right"><b>Box Office</b></th>
-            <th class="center"><b>Genre</b></th>
-            <th align="center"><b>Has teaser</b></th>
-            <th class="center"><b>Action</b></th>
+            <th align="left"><b>Box Office</b></th>
+            <th align="left"><b>Genre</b></th>
+            <th align="left"><b>Has teaser</b></th>
+            <th align="left"><b>Action</b></th>
         </tr>
         <c:forEach items="${Movie}" var="movie">
             <tr>
                 <td class="headers-row">${movie.getTitle()}</td>
+                <td class="second-row">${movie.getBoxOffice()}</td>
+                <td>${movie.getGenre()}</td>
                 <td><c:choose>
                         <c:when test="${movie.isHasTeaser() =='true' }">yes</c:when>
                         <c:otherwise>No</c:otherwise>
                     </c:choose></td>
-                <td class="second-row">${movie.getBoxOffice()}</td>
-                <td>${menuItem.getGenre()}</td>
-                <td><a href="AddToFavorite?movieId=${movie.getId()}">Add to Favorite</a></td>
+                <td><a href="AddToFavorite?movieId=${movie.getMovieId()}">Add to Favorite</a></td>
             </tr>
         </c:forEach>
     </table>
