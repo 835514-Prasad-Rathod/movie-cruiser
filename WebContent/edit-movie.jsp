@@ -11,23 +11,24 @@
 
 </head>
 <body>
-  
+
     <header> <img src="images\logo.png" />
     <p class="movie-cruiser">Movie Cruiser</p>
     <nav> <a class="movies-header-section" href="ShowMovieListAdmin">Movies</a> </nav> </header>
     <form action="EditMovie" name="movies" method="post" onsubmit="return validateMovieForm()">
-      <input type="hidden" name="movieId" value="${movie.getMovieId()}" >
+        <input type="hidden" name="movieId" value="${movie.getMovieId()}">
         <p class="movies-in-lable-table">Edit Movie</p>
-        
+
         <table class="for-tables-in-movie-list">
-      <c:set var="movie" value="${movie}">
-  </c:set>
+            <c:set var="movie" value="${movie}">
+            </c:set>
             <tr>
                 <td><label for="title"><b>Title</b></label></td>
             </tr>
             <tr>
-                <td colspan=13><input type="text" name="title" size="120" value="${movie.getTitle()}" id="title"
-                    placeholder="Avengers - End Game"><span id="name"></span></td>
+                <td colspan=13><input type="text" name="title" size="120"
+                    value="${movie.getTitle()}" id="title" placeholder="Avengers - End Game"><span
+                    id="name"></span></td>
             </tr>
             <tr>
                 <td height="15px"></td>
@@ -55,8 +56,9 @@
 
                 <f:formatDate value="${movie.getDateOfLaunch()}" pattern="dd/MM/yyyy"
                     var="dateOfLaunch" />
-                <td><input id="dateOfLaunch" type="text" name="dateOfLaunch" value="${dateOfLaunch }"
-                    autofocus size=20 autocomplete="off" placeholder="27/04/2022" spellcheck="false"></td>
+                <td><input id="dateOfLaunch" type="text" name="dateOfLaunch"
+                    value="${dateOfLaunch }" autofocus size=20 autocomplete="off"
+                    placeholder="27/04/2022" spellcheck="false"></td>
 
                 <td><select name="genre">
                         <option value="${movie.getGenre()}">${movie.getGenre()}</option>

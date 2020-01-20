@@ -13,8 +13,10 @@
     <p class="movie-cruiser">Movie Cruiser</p>
     <nav> <a class="favorites-header-section" href="ShowFavorite">Favorites</a> </nav> </header>
     <p class="movies-in-lable-table">Movies</p>
-    <c:if test="${addFavoriteStatus==true }"><br><br>
-    <h4 class="for-Message-delete">Movie Added To Favorites Sucesfully</h4>
+    <c:if test="${addFavoriteStatus==true }">
+        <br>
+        <br>
+        <h4 class="for-Message-delete">Movie Added To Favorites Sucesfully</h4>
     </c:if>
     <table class="for-tables-in-movie-list" style="width: 50%" cellspacing="4">
         <tr>

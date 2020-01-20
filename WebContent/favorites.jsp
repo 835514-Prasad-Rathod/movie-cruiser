@@ -11,10 +11,13 @@
 <body>
     <header> <img src="images\logo.png" />
     <p class="movie-cruiser">Movie Cruiser</p>
-    <nav> <a class="movies-header-section" href="ShowMovieListCustomer">Movies</a>
-    <a class="favorites-header-section" href="ShowFavorite">Favorites</a> </nav> </header>
-    <p class="favourites">Favourites</p>    
-     <c:if test="${ removeFavoriteStatus==true }"><br><br><br>
+    <nav> <a class="movies-header-section" href="ShowMovieListCustomer">Movies</a> <a
+        class="favorites-header-section" href="ShowFavorite">Favorites</a> </nav> </header>
+    <p class="favourites">Favourites</p>
+    <c:if test="${ removeFavoriteStatus==true }">
+        <br>
+        <br>
+        <br>
         <h4 class="for-Message-delete">Movie removed from Favorite successfully</h4>
     </c:if>
     <table class="for-tables-in-movie-list" style="width: 50%">
@@ -31,7 +34,7 @@
                 <td align="center"><a href="RemoveFavorite?movieId=${movie.getMovieId()}">Delete</a></td>
             </tr>
             <tr>
-        </tr>
+            </tr>
         </c:forEach>
         <tr>
             <td align="left"><b>No Of Favorites :${favorite.getTotal()}</b></td>

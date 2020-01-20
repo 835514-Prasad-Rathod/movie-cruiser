@@ -17,10 +17,11 @@ import com.cognizant.movie.model.Movie;
 
 @WebServlet("/AddToFavorite")
 public class AddToFavoriteServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
- 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    long movieId = Long.parseLong(request.getParameter("movieId"));
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        long movieId = Long.parseLong(request.getParameter("movieId"));
         long userId = 1L;
         FavoriteDao favoriteDao = new FavoriteDaoCollectionImpl();
         favoriteDao.addFavoritesById(userId, movieId);
@@ -29,5 +30,5 @@ public class AddToFavoriteServlet extends HttpServlet {
         request.setAttribute("addFavoriteStatus", true);
         request.setAttribute("Movie", movieList);
         request.getRequestDispatcher("movie-list-customer.jsp").forward(request, response);
-	}
+    }
 }
